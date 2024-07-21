@@ -127,4 +127,8 @@ class WeatherController extends Controller
 
         return response()->json(['message' => 'Unsubscribed successfully']);
     }
+    
+    public function test(){
+        return response()->json(['message' => 'test']);
+    }
 }

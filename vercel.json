@@ -4,15 +4,21 @@
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },  
-    "routes": [{
-        "src": "/(.*)",
-        "dest": "/api/index.php"
-    }],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/index.php"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        } 
+    ],
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "weather-forecast-server-dosidat1503-do-si-dats-projects.vercel.app", 
-        "WEATHER_API_KEY": "@weather_api_key",
+        "WEATHER_API_KEY": "e36c9cb1980d47d499603640241907",
         "APP_KEY": "base64:RtLrVsw43JYj0QZl3Nwa/0hWFh4GB7OpRWdYL7Z9y9E=", 
         "MAIL_MAILER": "smtp",
         "MAIL_HOST": "smtp.gmail.com",

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WeatherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+ 
+Route::get('/getWeather', [WeatherController::class, 'getWeather']);
+Route::post('/subcribeMailReceiveInfoDaily', [WeatherController::class, 'subcribeMailReceiveInfoDaily']); 
+Route::get('/unsubscribe/{verificationCode}', [WeatherController::class, 'unsubscribe']); 
+Route::get('/verify-email/{verificationCode}', [WeatherController::class, 'verifyEmail']);

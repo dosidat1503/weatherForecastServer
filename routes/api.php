@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/weather', [WeatherController::class, 'getWeather']);
+Route::get('/getWeather', [WeatherController::class, 'getWeather']);
 Route::post('/subcribeMailReceiveInfoDaily', [WeatherController::class, 'subcribeMailReceiveInfoDaily']); 
 Route::get('/unsubscribe/{verificationCode}', [WeatherController::class, 'unsubscribe']); 
 Route::get('/verify-email/{verificationCode}', [WeatherController::class, 'verifyEmail']);

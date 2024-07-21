@@ -34,5 +34,11 @@ php artisan key:generate
 ### 7. Edit handle method in file CorsMiddleware:
 - Open file CorsMiddleware in folder /app/Http/Middleware, change `https://weather-forecast-client-go.vercel.app` to `http://localhost:5173`
 
+### 8. Run project:
+- Run command to run project:
+```html
+php artisan serve
+```
+
 - You can access it in your browser at http://localhost:8000
  

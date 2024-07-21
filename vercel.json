@@ -11,8 +11,14 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/api/index.php"  
         } 
+    ], 
+    "crons": [
+      {
+        "path": "/sendDailyWeatherEmail",
+        "schedule": "0 5 * * *"
+      }
     ],
     "env": {
         "APP_ENV": "production",

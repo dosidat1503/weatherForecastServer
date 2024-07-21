@@ -23,13 +23,15 @@ class WeatherService{
                 'alerts' => 'no',
             ]
         );
-
-        if ($response->successful()) {
-            return $response->json();
-        } else {
-            Log::error('Failed to fetch weather data: ' . $response->body());
-            return null;
-        }
  
+        if ($response->successful()) {
+            return $response->json(); 
+        }  
+        else{
+            return response()->json([
+                'error' => 'Internal Server Error',
+                'message' => 'Failed to fetch weather data from external API.'
+            ], 500);
+        }
     } 
 }

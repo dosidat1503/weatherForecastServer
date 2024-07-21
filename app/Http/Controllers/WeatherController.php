@@ -23,7 +23,7 @@ class WeatherController extends Controller
         $forecastDayQuantity = $request->input('forecastDayQuantity');
         $weather = $this->weatherService->getWeather($location, $forecastDayQuantity);
 
-        return response()->json($weather);
+        return $weather;
     }
 
     public function subcribeMailReceiveInfoDaily(Request $request){
@@ -127,8 +127,5 @@ class WeatherController extends Controller
 
         return response()->json(['message' => 'Unsubscribed successfully']);
     }
-    
-    public function test(){
-        return response()->json(['message' => 'test']);
-    }
+     
 }

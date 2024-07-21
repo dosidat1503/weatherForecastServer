@@ -11,8 +11,17 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://yourprojectdomain.com",
-        
+        "APP_URL": "weather-forecast-server-dosidat1503-do-si-dats-projects.vercel.app", 
+        "WEATHER_API_KEY": "@weather_api_key",
+        "APP_KEY": "base64:LNMOeCRAjdkR/v/ycrH5EW+jz0RBDL+UDcqaIBKXQUA=", 
+        "MAIL_MAILER": "smtp",
+        "MAIL_HOST": "smtp.gmail.com",
+        "MAIL_PORT": "587",
+        "MAIL_USERNAME": "dosidat15031712@gmail.com",
+        "MAIL_PASSWORD": "pzjjrfcysfotwjrv",
+        "MAIL_ENCRYPTION": "tls",
+        "MAIL_FROM_ADDRESS": "dosidat15031712@gmail.com",
+        "MAIL_FROM_NAME": "Forecast Weather",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
